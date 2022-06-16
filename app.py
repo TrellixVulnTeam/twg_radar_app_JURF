@@ -13,7 +13,6 @@ st.write("""## How it works""")
 st.write("Put in your stats on the sidebar, then a radar chart similar to TWG should be generated."
          "Depending if I got around to it, there may be additional features such as plot customisation options.")
 
-
 #Create and name sidebar
 #https://docs.streamlit.io/library/api-reference/widgets/st.number_input
 
