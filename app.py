@@ -21,39 +21,51 @@ st.sidebar.header('Select your stats!')
 with st.sidebar:
     attack_bonus = st.number_input('Insert your Attack Bonus', min_value = 5)
     st.write('Your Attack Bonus is ', attack_bonus)
+    st.markdown('---')
 
     ddi = st.number_input('Insert your DDI', min_value = 5)
     st.write('Your DDI is ', ddi)
+    st.markdown('---')
 
     health_points = st.number_input('Insert your Health Points', min_value = 100, value = 500)
     st.write('Your Health Points is ', health_points)
+    st.markdown('---')
 
     stamina = st.number_input('Insert your Stamina', min_value = 100, value = 1000)
     st.write('Your Stamina is ', stamina)
+    st.markdown('---')
 
     dodge = st.number_input('Insert your Dodge', min_value = 5)
     st.write('Your Dodge is ', dodge)
+    st.markdown('---')
 
     block = st.number_input('Insert your Block', min_value = 5)
     st.write('Your Block is ', block)
+    st.markdown('---')
 
     bleed_bonus = st.number_input('Insert your Bleed Bonus', min_value = 5)
     st.write('Your Bleed Bonus is ', bleed_bonus)
+    st.markdown('---')
 
     stamina_reducer = st.number_input('Insert your Stamina Reducer', min_value = 5)
     st.write('Your Stamina Reducer is ', stamina_reducer)
+    st.markdown('---')
 
     damage_reducer = st.number_input('Insert your Damage Reducer', min_value = 5)
     st.write('Your Damage Reducer is ', damage_reducer)
+    st.markdown('---')
 
     sdi = st.number_input('Insert your SDI', min_value = 5)
     st.write('Your SDI is ', sdi)
+    st.markdown('---')
 
     sub_bonus = st.number_input('Insert your Sub Bonus', min_value = 5)
     st.write('Your Sub Bonus is ', sub_bonus)
+    st.markdown('---')
 
     escape_sub = st.number_input('Insert your Escape Sub', min_value = 5)
-    st.write('Your Attack Bonus is ', escape_sub)
+    st.write('Your Escape Sub is ', escape_sub)
+    st.markdown('---')
 
 stat_values = [
         attack_bonus + ddi,  # Attack
@@ -80,7 +92,12 @@ fig.update_layout(
     ),
     angularaxis = dict(direction = 'clockwise')
   ),
-  showlegend = False
+  font=dict(
+        family="Courier New, monospace",
+        size=22,
+        color="goldenrod"
+    ),
+  showlegend = False, width=975, height=650
 )
 
 st.plotly_chart(fig, use_container_width=True)
